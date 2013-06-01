@@ -1,0 +1,7 @@
+def build(bld):
+	bld(features	= 'c cxx cxxprogram', 
+	    source	= bld.path.ant_glob('**/*.cpp')+bld.path.ant_glob('**/*.cc'),
+	    includes	= 'include', 
+	    target	= 'lunac', 
+	    use		= ['LLVM'], 
+	    lib		= ['dl'])

@@ -27,12 +27,10 @@ def find_gxx(conf):
 
 @conf
 def gxx_common_flags(conf):
-	print '!!!! COMMON'
 	"""
 	Common flags for g++ on nearly all platforms
 	"""
 	v = conf.env
-	print v
 
 	v['CXX_SRC_F']           = []
 	v['CXX_TGT_F']           = ['-c', '-o']

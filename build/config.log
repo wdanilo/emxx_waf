@@ -1,25 +1,17 @@
-# project lunac (0.1 alpha) configured on Sat Jun  1 21:58:23 2013 by
+# project lunac (0.1 alpha) configured on Sat Jun  1 22:25:50 2013 by
 # waf 1.7.9 (abi 98, python 20703f0 on linux2)
 # using ./waf configure
 #
 ----------------------------------------
 Setting top to
-/home/wdanilo/dev/flowbox/viewer_waf
+/home/wdanilo/dev/flowbox/emxx_waf
 ----------------------------------------
 Setting out to
-/home/wdanilo/dev/flowbox/viewer_waf/build
-----------------------------------------
-Checking for 'llvm-config'
-['llvm-config', '--cppflags', '--ldflags', '--libs', 'core', 'jit', 'native', 'bitwriter', 'bitreader', 'asmparser', 'linker']
-out: -I/usr/include  -DNDEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
--L/usr/lib64/llvm  -lpthread -lffi -ldl -lm 
--lLLVMLinker -lLLVMArchive -lLLVMAsmParser -lLLVMBitReader -lLLVMBitWriter -lLLVMX86AsmParser -lLLVMX86CodeGen -lLLVMSelectionDAG -lLLVMAsmPrinter -lLLVMMCParser -lLLVMX86Disassembler -lLLVMX86Desc -lLLVMX86Info -lLLVMX86AsmPrinter -lLLVMX86Utils -lLLVMJIT -lLLVMRuntimeDyld -lLLVMExecutionEngine -lLLVMCodeGen -lLLVMScalarOpts -lLLVMInstCombine -lLLVMTransformUtils -lLLVMipa -lLLVMAnalysis -lLLVMTarget -lLLVMMC -lLLVMObject -lLLVMCore -lLLVMSupport
-
-yes
+/home/wdanilo/dev/flowbox/emxx_waf/build
 ----------------------------------------
 Checking for 'c_bgxlc' (c compiler)
 find program=['bgxlc_r', 'bgxlc'] paths=['/opt/jdk1.7.0_09/bin', '/home/wdanilo/.dotfiles/bin', '/opt/cuda-5.0/bin', '/usr/local/bin', '/usr/bin', '/bin', '/opt/bin', '/usr/x86_64-pc-linux-gnu/gcc-bin/4.6.3', '/opt/nvidia-cg-toolkit/bin', '/usr/games/bin', '/opt/vmware/bin', '/opt/cuda/bin', '/opt/cuda/libnvvp', '/opt/ekopath/bin', '/usr/lib64/mpich2/bin', '/opt/pycharm-2.6.3/bin/', '/opt/emscripten'] var='CC' -> ''
-from /home/wdanilo/dev/flowbox/viewer_waf: Could not find the program bgxlc_r,bgxlc
+from /home/wdanilo/dev/flowbox/emxx_waf: Could not find the program bgxlc_r,bgxlc
 not found
 ----------------------------------------
 Checking for 'gcc' (c compiler)
@@ -46,29 +38,21 @@ int main(int argc, char **argv) {
 <==
 [1/2] [32mcxx: build/.conf_check_bd2f401f38676768c19748563d41feee/test.cpp -> build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/test.cpp.1.o
 [0m
-['em++', '-DHAVE_LLVM=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+['em++', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
 err: clang: warning: argument unused during compilation: '-nostdinc++'
 
 [2/2] [33mcxxprogram: build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/test.cpp.1.o -> build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog
 [0m
-['em++', 'test.cpp.1.o', '-o', '/home/wdanilo/dev/flowbox/viewer_waf/build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
+['em++', 'test.cpp.1.o', '-o', '/home/wdanilo/dev/flowbox/emxx_waf/build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
 yes
 ----------------------------------------
 Checking for program flex
 flex++
 find program=['flex'] paths='' var='FLEX' -> 'flex++'
 ----------------------------------------
-Checking for 'llvm-config'
-['llvm-config', '--cppflags', '--ldflags', '--libs', 'core', 'jit', 'native', 'bitwriter', 'bitreader', 'asmparser', 'linker']
-out: -I/usr/include  -DNDEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
--L/usr/lib64/llvm  -lpthread -lffi -ldl -lm 
--lLLVMLinker -lLLVMArchive -lLLVMAsmParser -lLLVMBitReader -lLLVMBitWriter -lLLVMX86AsmParser -lLLVMX86CodeGen -lLLVMSelectionDAG -lLLVMAsmPrinter -lLLVMMCParser -lLLVMX86Disassembler -lLLVMX86Desc -lLLVMX86Info -lLLVMX86AsmPrinter -lLLVMX86Utils -lLLVMJIT -lLLVMRuntimeDyld -lLLVMExecutionEngine -lLLVMCodeGen -lLLVMScalarOpts -lLLVMInstCombine -lLLVMTransformUtils -lLLVMipa -lLLVMAnalysis -lLLVMTarget -lLLVMMC -lLLVMObject -lLLVMCore -lLLVMSupport
-
-yes
-----------------------------------------
 Checking for 'c_bgxlc' (c compiler)
 find program=['bgxlc_r', 'bgxlc'] paths=['/opt/jdk1.7.0_09/bin', '/home/wdanilo/.dotfiles/bin', '/opt/cuda-5.0/bin', '/usr/local/bin', '/usr/bin', '/bin', '/opt/bin', '/usr/x86_64-pc-linux-gnu/gcc-bin/4.6.3', '/opt/nvidia-cg-toolkit/bin', '/usr/games/bin', '/opt/vmware/bin', '/opt/cuda/bin', '/opt/cuda/libnvvp', '/opt/ekopath/bin', '/usr/lib64/mpich2/bin', '/opt/pycharm-2.6.3/bin/', '/opt/emscripten'] var='CC' -> ''
-from /home/wdanilo/dev/flowbox/viewer_waf: Could not find the program bgxlc_r,bgxlc
+from /home/wdanilo/dev/flowbox/emxx_waf: Could not find the program bgxlc_r,bgxlc
 not found
 ----------------------------------------
 Checking for 'gcc' (c compiler)
@@ -95,29 +79,21 @@ int main(int argc, char **argv) {
 <==
 [1/2] [32mcxx: build/.conf_check_bd2f401f38676768c19748563d41feee/test.cpp -> build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/test.cpp.1.o
 [0m
-['em++', '-DHAVE_LLVM=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+['em++', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
 err: clang: warning: argument unused during compilation: '-nostdinc++'
 
 [2/2] [33mcxxprogram: build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/test.cpp.1.o -> build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog
 [0m
-['em++', 'test.cpp.1.o', '-o', '/home/wdanilo/dev/flowbox/viewer_waf/build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
+['em++', 'test.cpp.1.o', '-o', '/home/wdanilo/dev/flowbox/emxx_waf/build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
 yes
 ----------------------------------------
 Checking for program flex
 flex++
 find program=['flex'] paths='' var='FLEX' -> 'flex++'
 ----------------------------------------
-Checking for 'llvm-config'
-['llvm-config', '--cppflags', '--ldflags', '--libs', 'core', 'jit', 'native', 'bitwriter', 'bitreader', 'asmparser', 'linker']
-out: -I/usr/include  -DNDEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
--L/usr/lib64/llvm  -lpthread -lffi -ldl -lm 
--lLLVMLinker -lLLVMArchive -lLLVMAsmParser -lLLVMBitReader -lLLVMBitWriter -lLLVMX86AsmParser -lLLVMX86CodeGen -lLLVMSelectionDAG -lLLVMAsmPrinter -lLLVMMCParser -lLLVMX86Disassembler -lLLVMX86Desc -lLLVMX86Info -lLLVMX86AsmPrinter -lLLVMX86Utils -lLLVMJIT -lLLVMRuntimeDyld -lLLVMExecutionEngine -lLLVMCodeGen -lLLVMScalarOpts -lLLVMInstCombine -lLLVMTransformUtils -lLLVMipa -lLLVMAnalysis -lLLVMTarget -lLLVMMC -lLLVMObject -lLLVMCore -lLLVMSupport
-
-yes
-----------------------------------------
 Checking for 'c_bgxlc' (c compiler)
 find program=['bgxlc_r', 'bgxlc'] paths=['/opt/jdk1.7.0_09/bin', '/home/wdanilo/.dotfiles/bin', '/opt/cuda-5.0/bin', '/usr/local/bin', '/usr/bin', '/bin', '/opt/bin', '/usr/x86_64-pc-linux-gnu/gcc-bin/4.6.3', '/opt/nvidia-cg-toolkit/bin', '/usr/games/bin', '/opt/vmware/bin', '/opt/cuda/bin', '/opt/cuda/libnvvp', '/opt/ekopath/bin', '/usr/lib64/mpich2/bin', '/opt/pycharm-2.6.3/bin/', '/opt/emscripten'] var='CC' -> ''
-from /home/wdanilo/dev/flowbox/viewer_waf: Could not find the program bgxlc_r,bgxlc
+from /home/wdanilo/dev/flowbox/emxx_waf: Could not find the program bgxlc_r,bgxlc
 not found
 ----------------------------------------
 Checking for 'gcc' (c compiler)
@@ -144,29 +120,21 @@ int main(int argc, char **argv) {
 <==
 [1/2] [32mcxx: build/.conf_check_bd2f401f38676768c19748563d41feee/test.cpp -> build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/test.cpp.1.o
 [0m
-['em++', '-DHAVE_LLVM=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+['em++', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
 err: clang: warning: argument unused during compilation: '-nostdinc++'
 
 [2/2] [33mcxxprogram: build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/test.cpp.1.o -> build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog
 [0m
-['em++', 'test.cpp.1.o', '-o', '/home/wdanilo/dev/flowbox/viewer_waf/build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
+['em++', 'test.cpp.1.o', '-o', '/home/wdanilo/dev/flowbox/emxx_waf/build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
 yes
 ----------------------------------------
 Checking for program flex
 flex++
 find program=['flex'] paths='' var='FLEX' -> 'flex++'
 ----------------------------------------
-Checking for 'llvm-config'
-['llvm-config', '--cppflags', '--ldflags', '--libs', 'core', 'jit', 'native', 'bitwriter', 'bitreader', 'asmparser', 'linker']
-out: -I/usr/include  -DNDEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
--L/usr/lib64/llvm  -lpthread -lffi -ldl -lm 
--lLLVMLinker -lLLVMArchive -lLLVMAsmParser -lLLVMBitReader -lLLVMBitWriter -lLLVMX86AsmParser -lLLVMX86CodeGen -lLLVMSelectionDAG -lLLVMAsmPrinter -lLLVMMCParser -lLLVMX86Disassembler -lLLVMX86Desc -lLLVMX86Info -lLLVMX86AsmPrinter -lLLVMX86Utils -lLLVMJIT -lLLVMRuntimeDyld -lLLVMExecutionEngine -lLLVMCodeGen -lLLVMScalarOpts -lLLVMInstCombine -lLLVMTransformUtils -lLLVMipa -lLLVMAnalysis -lLLVMTarget -lLLVMMC -lLLVMObject -lLLVMCore -lLLVMSupport
-
-yes
-----------------------------------------
 Checking for 'c_bgxlc' (c compiler)
 find program=['bgxlc_r', 'bgxlc'] paths=['/opt/jdk1.7.0_09/bin', '/home/wdanilo/.dotfiles/bin', '/opt/cuda-5.0/bin', '/usr/local/bin', '/usr/bin', '/bin', '/opt/bin', '/usr/x86_64-pc-linux-gnu/gcc-bin/4.6.3', '/opt/nvidia-cg-toolkit/bin', '/usr/games/bin', '/opt/vmware/bin', '/opt/cuda/bin', '/opt/cuda/libnvvp', '/opt/ekopath/bin', '/usr/lib64/mpich2/bin', '/opt/pycharm-2.6.3/bin/', '/opt/emscripten'] var='CC' -> ''
-from /home/wdanilo/dev/flowbox/viewer_waf: Could not find the program bgxlc_r,bgxlc
+from /home/wdanilo/dev/flowbox/emxx_waf: Could not find the program bgxlc_r,bgxlc
 not found
 ----------------------------------------
 Checking for 'gcc' (c compiler)
@@ -193,12 +161,12 @@ int main(int argc, char **argv) {
 <==
 [1/2] [32mcxx: build/.conf_check_bd2f401f38676768c19748563d41feee/test.cpp -> build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/test.cpp.1.o
 [0m
-['em++', '-DHAVE_LLVM=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+['em++', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
 err: clang: warning: argument unused during compilation: '-nostdinc++'
 
 [2/2] [33mcxxprogram: build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/test.cpp.1.o -> build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog
 [0m
-['em++', 'test.cpp.1.o', '-o', '/home/wdanilo/dev/flowbox/viewer_waf/build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
+['em++', 'test.cpp.1.o', '-o', '/home/wdanilo/dev/flowbox/emxx_waf/build/.conf_check_bd2f401f38676768c19748563d41feee/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
 yes
 ----------------------------------------
 Checking for program flex

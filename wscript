@@ -67,7 +67,7 @@ def configure(cfg):
 		#cfg.env.CC = 'gcc-4.7.2'
 		#cfg.env.CXX = 'g++-4.7.2'
 		cfg.env.FLEX = 'flex++'
-		cfg.check_cfg(package='', path='llvm-config', args='--cppflags --ldflags --libs core jit native bitwriter bitreader asmparser linker', uselib_store='LLVM')
+		#cfg.check_cfg(package='', path='llvm-config', args='--cppflags --ldflags --libs core jit native bitwriter bitreader asmparser linker', uselib_store='LLVM')
 		cfg.load('compiler_c compiler_cxx unittest_gtest flex')
 		cfg.env.append_value('CXXFLAGS', ['-g', '-std=c++11', '-Wall', '-D__GXX_EXPERIMENTAL_CXX0X__'])
 		cfg.env.append_value('LINKFLAGS', ['-lprotobuf', '-rdynamic'])
